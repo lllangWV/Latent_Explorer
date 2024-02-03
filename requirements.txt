@@ -1,0 +1,13 @@
+# poly_graphs_lib requirements
+# Usage: pip install -r requirements.txt
+
+# Base ----------------------------------------
+
+# coxeter
+# crystals
+# mendeleev
+# pymatgen
+# numpy
+# scipy
+# pyyaml
+# matplotlib
