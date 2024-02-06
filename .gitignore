@@ -159,6 +159,8 @@ docs/
 /runs/
 notebooks/data/
 __pycache__/
-my_tests/
+/singlerun/
+/logs/
+
 
 
