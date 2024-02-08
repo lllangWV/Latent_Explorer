@@ -5,8 +5,7 @@ from latentexp.utils.config import FILE, PKG_DIR, ROOT, LOG_DIR, DATA_DIR
 from latentexp.utils.config import CONFIG, MP_API_KEY, N_CORES
 
 # Database paths
-from latentexp.utils.config import (MP_DIR, DB_DIR, 
-                                    DB_CALC_DIR, GLOBAL_PROP_FILE, N_CORES)
+from latentexp.utils.config import (MP_DIR, JSON_DIR, N_CORES)
 
 # Other important variables
 from latentexp.utils.log_config import setup_logging
