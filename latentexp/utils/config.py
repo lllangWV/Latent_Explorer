@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 import numpy as np
 import yaml
-import yaml
+
 # numpy options
 large_width = 400
 precision=3
@@ -24,7 +24,5 @@ with open(CONFIG_FILE, 'r') as f:
 N_CORES=CONFIG['N_CORES']
 MP_API_KEY=CONFIG['MP_API_KEY']
 
-MP_DIR=os.path.join(ROOT,'data','processed',CONFIG['DB_NAME'])
-DB_DIR=os.path.join(MP_DIR,'json_database')
-DB_CALC_DIR=os.path.join(MP_DIR,'calculations','MaterialsData')
-GLOBAL_PROP_FILE=os.path.join(MP_DIR,'global_properties.json')
+MP_DIR=os.path.join(ROOT,'data','raw',CONFIG['DB_NAME'])
+JSON_DIR=os.path.join(MP_DIR,'json_database')

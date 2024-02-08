@@ -27,6 +27,7 @@ dependencies:
 - pip:
   - hydra-core
   - hydra-joblib-launcher
+  - mp_api
   - p-tqdm
   - pytest
   - python-dotenv
