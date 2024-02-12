@@ -1,0 +1,44 @@
+name: latentexp
+channels:
+- pytorch
+- nvidia
+- defaults
+- conda-forge
+dependencies:
+- python==3.9.*
+- pytorch==2.0.1
+- torchvision==0.15.2
+- torchaudio==2.0.2
+- pytorch-cuda=11.8
+- pip
+
+- ase
+- autopep8
+- jupyterlab
+- matminer==0.9.0
+- matplotlib
+- nglview
+- ipywidgets
+- pandas
+- pylint
+- pymatgen
+- pytorch-lightning
+- seaborn
+- tqdm
+- pip:
+  - hydra-core
+  - hydra-joblib-launcher
+  - p-tqdm
+  - pytest
+  - python-dotenv
+  - smact
+  - streamlit
+  - wandb
+  - torch_geometric
+  - pyg_lib==0.3.1
+  - torch_scatter 
+  - torch_sparse
+  - torch_cluster
+  - torch_spline_conv
+  - -e .
+  - -f https://data.pyg.org/whl/torch-2.0.0+cu118.html
