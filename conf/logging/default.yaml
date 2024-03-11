@@ -1,5 +1,5 @@
 # log frequency
-val_check_interval: 5
+val_check_interval: 1
 progress_bar_refresh_rate: 20
 
 wandb:
@@ -7,7 +7,7 @@ wandb:
   project: crystal_generation_mit
   entity: null
   log_model: True
-  mode: 'online'
+  mode: 'offline'
   group: ${expname}
 
 wandb_watch:

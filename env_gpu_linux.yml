@@ -6,19 +6,20 @@ channels:
 - conda-forge
 dependencies:
 - python==3.9.*
-- pytorch==2.1.2
-- torchvision==0.16.2
-- torchaudio==2.1.2
+- pytorch==2.0.1
+- torchvision==0.15.2
+- torchaudio==2.0.2
 - pytorch-cuda=11.8
 - pip
 
 - ase
 - autopep8
 - jupyterlab
-- matminer
+- matminer==0.8.0       # Has error in matminer/utils/data.py, should be upgraded to v0.9.0, made change 
 - matplotlib
 - nglview
 - ipywidgets
+- pandas
 - pylint
 - pymatgen
 - pytorch-lightning
@@ -34,10 +35,10 @@ dependencies:
   - streamlit
   - wandb
   - torch_geometric
-  - pyg_lib
+  - pyg_lib==0.3.1
   - torch_scatter 
   - torch_sparse
   - torch_cluster
   - torch_spline_conv
   - -e .
-  - -f https://data.pyg.org/whl/torch-2.1.0+cu118.html
+  - -f https://data.pyg.org/whl/torch-2.0.0+cu118.html

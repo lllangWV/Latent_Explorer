@@ -163,20 +163,14 @@ def generation(loader, model, ld_kwargs, num_batches_to_sample, num_samples_per_
     if torch.cuda.is_available():
         batch.cuda()
 
-    batch_all_frac_coords = []
-    batch_all_atom_types = []
-    batch_frac_coords, batch_num_atoms, batch_atom_types = [], [], []
-    batch_lengths, batch_angles = [], []
-
-    
-    
-
     # only sample one z, multiple evals for stoichaticity in langevin dynamics
     _, _, z = model.encode(batch)
+
+    # Only use first sample in the batch
     first_sample=z[:1,:]
 
 
-    index_to_replace = 0
+    index_to_replace = 8
     mean, std = 0, 1  # Standard normal distribution parameters
     num_samples = 10
     samples = np.linspace(mean - 3*std, mean + 3*std, num_samples)
@@ -278,7 +272,7 @@ def main(args):
     gen_crys = p_map(lambda x: Crystal(x), crys_array_list)
 
 
-    generated_dir=os.path.join(args.root_path, 'generated_frozen')
+    generated_dir=os.path.join(args.root_path, 'generated_frozen_8')
     os.makedirs(generated_dir,exist_ok=True)
 
     for i,crys in enumerate(gen_crys):
